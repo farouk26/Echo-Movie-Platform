@@ -1,7 +1,7 @@
 import React from "react"
 
-function ActorPage() {
+function Footer() {
   return <div>index</div>
 }
 
-export default ActorPage
+export default Footer

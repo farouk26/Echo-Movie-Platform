@@ -1,7 +1,7 @@
 import React from "react"
 
-function MoviePage() {
+function SeriesCard() {
   return <div>index</div>
 }
 
-export default MoviePage
+export default SeriesCard
