@@ -8,7 +8,18 @@ module.exports = withMT({
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        dark: {
+          50: "#192026",
+          100: "#0f1215",
+          200: "#0e0e11",
+        },
+        sky: {
+          100: "#1db2f3",
+        },
+      },
+    },
   },
   plugins: [],
 })
