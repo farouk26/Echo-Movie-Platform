@@ -1,45 +1,49 @@
-import {
-  Navbar,
-  Typography,
-  IconButton,
-  Button,
-  Input,
-} from "@material-tailwind/react"
+import { Navbar, IconButton, iconButton, Input } from "@material-tailwind/react"
+import { IoSearchCircleOutline } from "react-icons/io5"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Nav() {
   return (
     <section className="w-full">
-      <Navbar color="blue-gray" className=" bg-dark-100 px-4 py-3 min-w-full">
-        <div className="flex flex-wrap items-center justify-between gap-y-4 w-full text-white">
-          <figure className="h-full w-[3%]">
-            <Image
-              src="/images/logo.png"
-              alt="logo"
-              height={500}
-              width={500}
-              priority
-              className="w-full h-full object-cover"
-            />
-          </figure>
+      <Navbar
+        color="blue-gray"
+        className=" bg-dark-100 py-3 min-w-full px-20 rounded-none"
+      >
+        <div className="flex items-center justify-between w-full text-white">
+          <div className="flex gap-5 justify-start w-full items-center">
+            <figure className="h-full w-[5%]">
+              <Image
+                src="/images/logo.png"
+                alt="logo"
+                height={500}
+                width={500}
+                priority
+                className="w-full h-full object-cover"
+              />
+            </figure>
+            <div className="flex justify-evenly items-center gap-4 h-full">
+              <Link href="/">Browse</Link>
+              <Link href="/movies">Movies</Link>
+              <Link href="/series">Tv Shows</Link>
+            </div>
+          </div>
 
-          <div className="relative flex w-full gap-2 md:w-max">
+          <div className="relative flex w-full gap-2 md:w-max bg-dark-50">
             <Input
               type="search"
               color="white"
               label="Type here..."
-              className="bg-dark-50"
               containerProps={{
                 className: "min-w-[288px]",
               }}
             />
-            <Button
+            <IconButton
               size="sm"
-              color="white"
-              className="!absolute right-1 top-1 rounded"
+              className="!absolute right-1 top-1 rounded bg-inherit"
             >
-              Search
-            </Button>
+              <IoSearchCircleOutline className="text-white w-6 h-6" />
+            </IconButton>
           </div>
         </div>
       </Navbar>
