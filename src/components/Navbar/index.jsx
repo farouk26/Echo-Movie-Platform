@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function Nav() {
   return (
-    <div className="navbar bg-dark-100 px-20">
+    <div className="navbar bg-dark-100 lg:px-20 px-6">
       <div className="navbar-start flex gap-6 items-center">
         <Link href="/">
           <figure className="min-w-fit h-8 my-3">
