@@ -1,36 +1,42 @@
-import { IoSearchCircleOutline } from "react-icons/io5"
+import { HiMenuAlt3 } from "react-icons/hi"
 import Image from "next/image"
 import Link from "next/link"
 
 export default function Nav() {
   return (
     <div className="navbar bg-dark-100 px-20">
-      <div className="navbar-start">
-        <figure className="min-w-fit h-8 my-3">
-          <Image
-            src="/images/logo.png"
-            alt="logo"
-            height={500}
-            width={500}
-            className="w-full h-full object-cover"
-          />
-        </figure>
-      </div>
-      <div className="navbar-center w-1/3 flex justify-center items-center">
-        <ul className="flex gap-2 w-full justify-evenly items-center">
+      <div className="navbar-start flex gap-6 items-center">
+        <Link href="/">
+          <figure className="min-w-fit h-8 my-3">
+            <Image
+              src="/images/logo.png"
+              alt="logo"
+              height={500}
+              width={500}
+              className="w-full h-full object-cover"
+            />
+          </figure>
+        </Link>
+        <ul className="lg:flex gap-2 justify-evenly items-center uppercase text-md font-light text-gray-400 hidden">
           <li>
-            <Link href="/">Browse</Link>
+            <Link className="btn btn-sm btn-ghost" href="/">
+              Browse
+            </Link>
           </li>
           <li>
-            <Link href="/">Movies</Link>
+            <Link className="btn btn-sm btn-ghost" href="/">
+              Movies
+            </Link>
           </li>
           <li>
-            <Link href="/">Tv Shows</Link>
+            <Link className="btn btn-sm btn-ghost" href="/">
+              Tv Shows
+            </Link>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <label className="input input-bordered flex items-center gap-2">
+        <label className="input input-bordered input-sm lg:flex items-center gap-2 hidden">
           <input type="text" className="grow" placeholder="Search" />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -45,6 +51,7 @@ export default function Nav() {
             />
           </svg>
         </label>
+        <HiMenuAlt3 className="lg:hidden block h-6 w-6 text-gray-200" />
       </div>
     </div>
   )
