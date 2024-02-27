@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function Home() {
   return (
-    <section className="w-full min-h-screen flex flex-col gap-4 lg:my-8 justify-center">
+    <section className="w-full min-h-screen flex flex-col gap-4 my-8 justify-center">
       <div className="flex w-full flex-col gap-6 min-h-fit lg:px-0 px-8">
         <div className="flex flex-col gap-8 w-full justify-center items-center">
           <h1 className="text-4xl lg:text-6xl font-bold w-full lg:w-[50%] text-center">
